@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Portfolio</title>
+    <title>Secure Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="login-body">
-    <div class="login-container">
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="contact-box" style="text-align: center;">
+        <h2 style="font-family: 'Orbitron'; margin-bottom: 20px;">SYSTEM LOGIN</h2>
         <form id="loginForm">
-            <h2>Admin Login</h2>
-            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="email" id="loginEmail" placeholder="Admin Email" required>
             <input type="password" id="loginPassword" placeholder="Password" required>
-            <button type="submit">Login</button>
-            <a href="index.html" class="back-link">Back to Home</a>
+            <button type="submit" class="submit-btn" style="margin-top: 15px;">AUTHENTICATE</button>
         </form>
+        <a href="index.html" style="color: gray; display: block; margin-top: 20px; text-decoration: none;">Return to Home</a>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

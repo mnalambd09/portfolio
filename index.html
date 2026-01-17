@@ -3,55 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interactive Portfolio</title>
+    <title>Modern High-Tech Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">PORTFOLIO</div>
+        <div class="logo">TECH<span>CORE</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="login.html" class="login-btn">Login</a></li>
         </ul>
     </nav>
 
-    <header id="home" class="hero-section">
-        <div class="hero-content">
-            <div class="profile-img">
-                <img src="https://via.placeholder.com/250" alt="Your Photo"> </div>
-            <h1>Hi, I'm <span class="highlight">A Programmer</span></h1>
-            <p>Building the future with code and high-tech solutions.</p>
-            <a href="#contact" class="cta-btn">Hire Me</a>
+    <header id="home" class="hero">
+        <div class="hero-container">
+            <div class="profile-frame">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=250&h=250&auto=format&fit=crop" alt="Profile">
+            </div>
+            <h1>Future-Ready <span class="gradient-text">Developer</span></h1>
+            <p>I build high-performance interactive web experiences.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary">View Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
         </div>
     </header>
 
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <form id="contactForm">
-            <input type="text" id="userName" placeholder="Your Name" required>
-            <input type="email" id="userEmail" placeholder="Your Email" required>
-            <textarea id="userMessage" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <section id="projects" class="card-section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400" alt="Tech">
+                <div class="card-content">
+                    <h3>Cyber Security</h3>
+                    <p>Building secure and encrypted systems for the future.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400" alt="Hardware">
+                <div class="card-content">
+                    <h3>AI Systems</h3>
+                    <p>Integrating artificial intelligence with web technologies.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400" alt="Network">
+                <div class="card-content">
+                    <h3>Cloud Solutions</h3>
+                    <p>Modern cloud architecture and serverless management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-box">
+            <h2>Send a Message</h2>
+            <form id="contactForm">
+                <div class="input-group">
+                    <input type="text" id="userName" required placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="userEmail" required placeholder="Email Address">
+                </div>
+                <textarea id="userMessage" rows="4" placeholder="How can I help you?"></textarea>
+                <button type="submit" class="submit-btn">Send Discovery Request</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>© 2026 Your Name | All Rights Reserved</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2026 TechCore Portfolio. Crafted with Passion.</p>
         </div>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

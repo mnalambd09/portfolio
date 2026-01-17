@@ -1,19 +1,18 @@
-// Firebase Configuration (আপনার Firebase থেকে তথ্য নিয়ে এখানে বসান)
+// Firebase Configuration (এখানে আপনার Firebase Console থেকে কপি করে কোড দিন)
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSy...",
+    authDomain: "yourproject.firebaseapp.com",
+    projectId: "yourproject",
+    storageBucket: "yourproject.appspot.com",
+    messagingSenderId: "12345678",
+    appId: "1:123456:web:abcd"
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-const auth = firebase.auth();
 
-// Contact Form Submission
+// Form Data Save to Firebase
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -22,37 +21,16 @@ if (contactForm) {
         const email = document.getElementById('userEmail').value;
         const message = document.getElementById('userMessage').value;
 
-        db.collection("contacts").add({
+        db.collection("messages").add({
             name: name,
             email: email,
             message: message,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            date: new Date().toLocaleString()
         })
         .then(() => {
-            alert("Message Sent Successfully!");
+            alert("Success! Your message is in our system.");
             contactForm.reset();
         })
-        .catch((error) => {
-            console.error("Error: ", error);
-        });
-    });
-}
-
-// Login Logic
-const loginForm = document.getElementById('loginForm');
-if (loginForm) {
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = document.getElementById('loginEmail').value;
-        const password = document.getElementById('loginPassword').value;
-
-        auth.signInWithEmailAndPassword(email, password)
-            .then((userCredential) => {
-                alert("Login Successful!");
-                window.location.href = "index.html";
-            })
-            .catch((error) => {
-                alert("Error: " + error.message);
-            });
+        .catch((err) => alert("Error: " + err));
     });
 }
