@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a; /* Dark High-tech Background */
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, rgba(15,23,42,1) 80%);
+}
+
+.profile-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #38bdf8;
+    box-shadow: 0 0 20px #38bdf8;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+/* Contact Form */
+.contact-section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+button {
+    padding: 15px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    padding: 50px;
+    text-align: center;
+    background: #070b14;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 24px; }
+}
